@@ -103,6 +103,7 @@ h2 {
   font-size: 25px;
 }
 
+
 .flex > section {
   background: #fff;
   padding: 1em;
@@ -179,4 +180,39 @@ button:hover {
   left: 0;
   margin: auto;
   width: 100%;
+}
+
+blockquote{
+  font-size: 1em;
+  width:60%;
+  margin:25px auto;
+    font-style:italic;
+  color: #555555;
+  padding:0.8em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
 }

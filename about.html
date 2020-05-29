@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cicero Chess</title>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</head>
+<body>
+  <div id="editor">
+  <div id="top"></div>
+  <div class="parent">
+  <nav>
+    <ul>
+      <li><a href="index.html" title="Home">&#9820</a></li> 
+      <li><a href="index.html" title="Chess Books">Chess Books</a></li>
+      <li><a href="sudoku.html" title="Sudoku Books">Sudoku Books</a></li>
+      <li><a href="#" title="About">About</a></li>
+      <li><a href="#contact" title="Contact">Contact</a></li>
+      <li><a href="blog/index.php" title="Blog">Blog</a></li>
+    </ul>
+  </nav>
+</div>
+  <header style="padding-top:1.5em;">
+    <h1>Cicero Chess</h1>
+  </header>  
+  </div>
+  <div class="flex abt" id="about">
+
+<section style="text-align: left;max-width: 400px;">
+    <p>
+    <strong>About</strong><br/>
+    I am an amateur player who has played chess for many years at club level and on various online chess sites.
+    My aim is to write books that are clearly written and formatted, accurate and instructive, and great value for their cost. I hope that you will enjoy reading my books, and that they will improve your chess skills.
+    </p>
+    <p>
+     <strong>Book reviews and feedback</strong><br/>
+    
+        If you would like to help other potential buyers of my books, please write an honest review of the books on Amazon. I also welcome feedback on my books either on Amazon or on my chess blog.
+    </p>
+   
+    <p>
+    <strong>Chessable</strong><br/>
+    
+    
+    The following books are also available on Chessable.<br/><br />
+    
+    1001 Checkmate Exercises: From Beginner to Winner - <a href="https://www.chessable.com/1001-checkmate-exercises-from-beginner-to-winner/course/21900/">Click here</a><br/>
+    1001 Checkmate Exercises: Mastering An Essential Chess Skill - <a href="https://www.chessable.com/1001-checkmate-exercises-mastering-an-essential-chess-skill/course/27699/">Click here</a><br/>
+    1001 Checkmate Exercises: Advanced Edition - <a href="https://www.chessable.com/1001-checkmate-exercises-advanced-edition/course/28768/">Click here</a>
+    </p>
+    <p>
+    <strong>Chess blog</strong><br/>    
+    Please see my blog at <a href="http://cicerochess.com/blog/">http://cicerochess.com/blog/</a> for information on new books and special offers.
+    </p>
+    <p>
+    <strong>Sudoku</strong><br/>  
+    I have also written several Sudoku books for fans of this logical puzzle. Free samples of some of my Sudoku books are available at the following links.<br /><br />
+    365 Sudoku puzzles - <a href="https://drive.google.com/file/d/12Qc3aOFeL662EpelY4ErRaDAP6a-cxzc/view?usp=sharing">Click here</a><br/>
+    365 Easy Sudoku puzzles - <a href="https://drive.google.com/file/d/1VqYFkYBjP_wqtcRtcsoL1io5KS4eD9cB/view?usp=sharing">Click here</a><br/>
+    365 Hard Sudoku puzzles - <a href="https://drive.google.com/file/d/18_BHBPM2YGWeBJSI4QL2M-DWPifYdQ-k/view?usp=sharing">Click here</a><br/>
+    365 Extreme Sudoku puzzles - <a href="https://drive.google.com/file/d/1ofo6o4RiyImOrbJoDnsfDRl9dr7xUS26/view?usp=sharing">Click here</a><br/>
+
+    </p>
+        <blockquote>
+        I love using Sam's books for my students as the chapter puzzles are categorized by PLYs. This progression of difficulty allows a coach to see a student's Chess Vision Level and find the right type of Tactics to work with. My students are excited to do these as warm-up puzzles before I begin my Mini-Lessons. Thank you Mr. Cicero!
+        <span>Mr. Jon Santos, Houston Chess Coach</span>
+      </blockquote>
+    </section>
+
+  </div>
+   <div class="flex cntct" id="contact">
+ <p>Email : sam@cicerochess.com
+</br></br> Copyright &#169; 2020 Cicero Chess
+</p>
+  </div>
+</div>
+
+</body>
+</html>
