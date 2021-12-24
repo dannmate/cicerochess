@@ -47,7 +47,6 @@ $(document).ready(function(){
       <li><a href="sudoku.html" title="Sudoku Books">Sudoku Books</a></li>
       <li><a href="about.html" title="About">About</a></li>
       <li><a href="#contact" title="Contact">Contact</a></li>
-      <li><a href="http://eepurl.com/hwNVqv" title="Newsletter">Newsletter</a></li>
       <li><a href="blog/index.php" title="Blog">Blog</a></li>
     </ul>
   </nav>
@@ -60,18 +59,17 @@ $(document).ready(function(){
   <div class="flex" id="books" style="padding-top:2em;">
      
     <section v-for="(book, bookIndex) in books" :key="bookIndex">
-      <img :src="book.image" alt="Book Cover" />
-      <h2>{{ book.title }} </h2>
+      <img :src="'https://cloud.squidex.io/api/assets/cicerochess/' + book.data.image.iv[0]" alt="Book Cover" /> 
+      <h2>{{ book.data.title.iv}} </h2>
       <p></p>
       <aside>
         <ul>
           
           
         </ul>
-        <a :href="book.url"><button>Buy</button></a>
+        <a :href="book.data.url.iv"><button>Buy</button></a>
       </aside>
     </section>
-    
   
     
   
@@ -92,8 +90,11 @@ $(document).ready(function(){
       },
       mounted: function() {
                axios
-          .get('chess_books.json')
-          .then(response => (this.books = response.data));
+          .get('https://cloud.squidex.io/api/content/cicerochess/book')
+          .then((response) => {
+              const items = response.data.items
+              this.books = items.filter(item => item.data.type.iv == 'Chess') 
+           })
    
         },
     });
